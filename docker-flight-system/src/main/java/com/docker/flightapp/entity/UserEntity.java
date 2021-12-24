@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class UserEntity {
 
 	@Id
-	@Column(name = "userId")
+	@Column(name = "userId",unique = true)
 	private Long userId;
 	
 	@Column(name = "userName")
