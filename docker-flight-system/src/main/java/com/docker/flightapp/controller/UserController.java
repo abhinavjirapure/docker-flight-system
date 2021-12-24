@@ -1,6 +1,6 @@
 package com.docker.flightapp.controller;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +38,7 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/search/user/data/{userId}")
-	public ResponseEntity<List<UserEntity>> searchUserData(@PathVariable long userId) {
+	public ResponseEntity<Optional<UserEntity>> searchUserData(@PathVariable long userId) {
 		logger.info("Inside searchUserData method");
 		logger.info("Returning search searchUserData response");
 		return new ResponseEntity<>(service.searchUserData(userId), HttpStatus.OK);

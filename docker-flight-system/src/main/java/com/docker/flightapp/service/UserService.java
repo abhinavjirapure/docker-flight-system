@@ -1,7 +1,6 @@
 package com.docker.flightapp.service;
 
-import java.util.List;
-
+import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,10 +36,10 @@ public class UserService {
 		return null;
 	}
 
-	public List<UserEntity> searchUserData(long userId) {
+	public Optional<UserEntity> searchUserData(long userId) {
 		logger.info("Inside searchUserData service method");
 		logger.info("Creating db query");
-		List<UserEntity> list = repo.findAllById(userId);
+		Optional<UserEntity> list = repo.findById(userId);
 		logger.info("Returning user search list");
 		return list;
 	}
