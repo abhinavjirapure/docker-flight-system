@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.docker.flightapp.repository","com.docker.flightapp.service"})
+@ComponentScan({"com.docker.flightapp.repository","com.docker.flightapp.service","com.docker.flightapp.entity"})
 public class DockerFlightSystemApplication {
 
 	public static void main(String[] args) {
