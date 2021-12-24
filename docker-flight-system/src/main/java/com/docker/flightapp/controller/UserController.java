@@ -19,8 +19,6 @@ import com.docker.flightapp.entity.UserEntity;
 import com.docker.flightapp.model.UserDetails;
 import com.docker.flightapp.service.UserService;
 
-
-
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping(value = "/api/v1.0")
