@@ -21,7 +21,7 @@ import com.docker.flightapp.service.UserService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(value = "/api/v1.0")
+@RequestMapping("/api/v1.0")
 public class UserController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -29,7 +29,7 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	@PostMapping(value = "/create/user")
+	@PostMapping("/create/user")
 	public ResponseEntity<String> createUser(@RequestBody UserDetails requestModel) throws Exception {
 		logger.info("Inside createUser method");
 		service.createUser(requestModel);
@@ -37,7 +37,7 @@ public class UserController {
 		return new ResponseEntity<>("New User Created Successfully...", HttpStatus.OK);
 	}
 
-	@GetMapping(value = "/search/user/data/{userId}")
+	@GetMapping("/search/user/data/{userId}")
 	public ResponseEntity<Optional<UserEntity>> searchUserData(@PathVariable long userId) {
 		logger.info("Inside searchUserData method");
 		logger.info("Returning search searchUserData response");
