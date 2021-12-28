@@ -20,8 +20,8 @@ import com.docker.flightapp.model.UserDetails;
 import com.docker.flightapp.service.UserService;
 
 @RestController
+@RequestMapping(value="/api/v1.0")
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1.0")
 public class UserController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
